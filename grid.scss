@@ -1,4 +1,4 @@
-//   Quick Start Guide
+// 	Quick Start Guide
 //	-----------------
 //	This grid system contains two types of grid layouts. One that uses margins
 //	for it's gutters & one that uses padding & border-box to separate elements.
@@ -11,16 +11,16 @@
 //	with $fullwidth really. For more information refer to the online documentation.
 //
 
-$basefont: 		Arial, Helvetica, sans-serif;
-$basesize: 		100%;
-$lineheight: 	1.5;
+$basefont: Arial, Helvetica, sans-serif;
+$basesize: 100%;
+$lineheight: 1.5;
 
-$fullwidth: 	100%;
-$colwidth: 		8.33333333%;
-$totalcols: 	12;
-$max-width: 	1400px;
-$padding: 		0.5em;
-$g: 			2%;
+$fullwidth: 100%;
+$colwidth: 8.33333333%;
+$totalcols: 12;
+$max-width: 1400px;
+$padding: 0.5em;
+$g: 2%;
 
 @mixin borderbox { 
     -moz-box-sizing: border-box; 
@@ -103,5 +103,153 @@ $g: 			2%;
 		$var3:	$offset * $colwidth - $var2;
 		$width:	$var3 + $g;
 		@return ($width) !important;
+	}
+}
+body {
+	font-family: $basefont;
+	font-size: 	$basesize;
+	line-height: $lineheight;
+	margin: 0;
+}
+
+ul {
+	padding:0;
+	margin:0;
+}
+ul li {
+	@include base;
+	width: columns(2.1);
+	background-color: green;
+	list-style:none;
+}
+.nav {
+	@include spanbase;
+	width: columns-span(7);
+	background-color:pink;
+}
+.morenestedspan {
+	@include spanbase;
+	width: columns-span(6);
+	background-color:red;
+}
+.nestedspan {
+	@include spanbase;
+	width: columns-span(6);
+	background-color:#666;
+}
+.gridspan {
+	@include spanbase;
+	width: 				columns-span(4);
+	margin-left: 		offset(1);
+	background-color: 	#777;
+}
+.banner {
+	@include base;
+	width: columns(12);
+	background-color:#333;
+	height:150px;
+}
+.row {
+	@include row;
+}
+.header {
+	@include base;
+	width: columns-span(12);
+	background-color: #000;
+	color: #fff;
+}
+.content {
+	@include base;
+	width: columns(8);
+	background-color: #666;
+	color: #fff;
+}
+.services {
+	@include base;
+	@include lastchild;
+	width: columns(4);
+	background-color: #e33;
+}
+.about {
+	@include base;
+	width: columns(3);
+	background-color: #444;
+}
+.contact {
+	@include base;
+	width: columns(4);
+	background-color: #666;
+}
+.random {
+	@include base;
+	@include lastchild;
+	width: columns(5);
+	background-color: #888;
+}
+.product {
+	@include base;
+	@include lastchild;
+	width: columns(3);
+	background-color: #eee;
+	margin-bottom:1em;
+	height: 150px;
+}
+.half {
+	@include base;
+	@include lastchild;
+	width: columns(6);
+	background-color: #777;
+}
+.a {
+	@include base;
+	@include lastchild;
+	width: columns(6);
+	background-color: #fff;
+}
+.nine {
+	@include base;
+	width: columns(3);
+	margin-left: offset(2);
+	background-color: #999;
+}
+.anine {
+	@include base;
+	width: columns(2);
+	margin-left: offset(1);
+	background-color: #999;
+}
+.bnine {
+	@include base;
+	@include lastchild;
+	width: columns(2);
+	margin-right: offset(1);
+	background-color:#999;
+}
+.centrediv {
+	@include centre;
+	@include centretext;
+	width: columns(4);
+	background-color:#444;
+}
+.footer {
+	@include base;
+	width: columns(12);
+	background-color:#333;
+}
+@mixin responsive {
+	float:none;
+	width:100%;
+	margin: 0 !important;
+}
+
+@media only screen and (max-width: 320px) {
+	ul li, .nav, gridspan, .product, .content, .services, .random, .about, .contact, .nine, .anine, .bnine, .half, .centrediv {
+	@include responsive;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	ul li, .nav, .gridspan, .product, .content, .services, .random, .about, .contact, .nine, .anine, .bnine, .half, .centrediv {
+	@include responsive;
 	}
 }
