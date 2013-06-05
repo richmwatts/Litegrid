@@ -8,8 +8,8 @@ Prerequisites
 =============
 
 <ul>
-<li>Ruby</li>
-<li>SASS</li>
+<li>Ruby - Great guide for installing Ruby on MacOSX http://net.tutsplus.com/tutorials/ruby/how-to-install-ruby-on-a-mac/</li>
+<li>SASS http://sass-lang.com/</li>
 <li>The ability to copy simple commands into the terminal</li>
 </ul>
 
