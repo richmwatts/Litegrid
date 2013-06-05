@@ -12,3 +12,17 @@ Prerequisites
 <li>SASS</li>
 <li>The ability to copy simple commands into the terminal</li>
 </ul>
+
+
+Why Autumn?
+===========
+
+<ul>
+<li>It's extremely customizable</li>
+<li>It contains two grid systems</li>
+<li>Easily nest and offset your grid</li>
+<li>Superb browser support </li>
+<li>It's lighting quick to use</li>
+<li>Built using the preprocessor SCSS</li>
+<li>Extensive documentation & support</li>
+<li>It's not BootStrap</li>
