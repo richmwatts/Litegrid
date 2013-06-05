@@ -1,8 +1,8 @@
 Autumn
 ======
 
-Autumn in it's currennt form is an <b>extremely</b> flexible grid system. However, it will eventually evolve 
-into an extensive framework that aims to enable you to take your projects from the sketching stages right through
+Autumn in it's currennt form is an <b>extremely</b> flexible grid system. However, it is hoped Autumn will eventually
+evolve into an extensive framework that will enable you to take your projects from the sketching stages right through
 to shipping the final product.
 
 Prerequisites
