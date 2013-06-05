@@ -2,7 +2,7 @@ Autumn
 ======
 
 Autumn is currently an <b>extremely</b> flexible grid system but will eventually evolve into an extensive framework that
-aims to enable you to take your projects from the sketching process through to shipping.
+aims to enable you to take your projects from the sketching process right through to shipping.
 
 Prerequisites
 =============
