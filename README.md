@@ -22,8 +22,27 @@ Why Autumn?
 <li>It's extremely customizable</li>
 <li>It contains two grid systems</li>
 <li>Easily nest and offset your grid</li>
+<li>It's semantic</li>
 <li>Superb browser support </li>
 <li>It's lighting quick to use</li>
 <li>Built using the preprocessor SCSS</li>
 <li>Extensive documentation & support</li>
 <li>It's not BootStrap</li>
+
+
+The Syntax
+==========
+
+The syntax is effortless, there are no presentational classes (expect the row class, 
+which you can easily attach to a <section>). You will choose your class names.
+
+```<section class="row">```
+``` <article class="blog">```
+ ```   Content here```
+```</article>```
+
+```<aside class="sidebar">```
+```   Content here```
+```</aside>```
+```</section>```
+
