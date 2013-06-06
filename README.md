@@ -65,3 +65,5 @@ Autumn's grid has amazing cross browser support.
 
 *Autumn's grid is supported all the way down to Opera 10 but users may experience
 some minor subpixel rendering differences in older versions of Opera.
+
+Autumn is a project created & maintained by <a href="http://twitter.com/richmwatts">@richmwatts</a>
