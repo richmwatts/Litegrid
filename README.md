@@ -53,7 +53,7 @@ It's literally down to you to make your class names more semantic and meaningful
 Browser Support
 ===============
 
-Autumn has amazing cross browser support.
+Autumn's grid has amazing cross browser support.
 
 <ul>
 <li>IE 8 +</li>
