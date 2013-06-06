@@ -32,7 +32,6 @@ Why Autumn?
 
 The Syntax
 ==========
-
 The syntax is effortless, there are no presentational classes (except the row class, 
 which you can easily attach to a HTML5 ```<section>``` tag). Other than this you will
 choose your class names.
