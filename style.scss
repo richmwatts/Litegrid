@@ -28,145 +28,15 @@ body {
 	line-height: $lineheight;
 	margin: 0;
 }
-.row {
-	@include row;
-}
-.mastheadbanner {
-	@include centre;
-	width: columns(12);
-	background-color: #982;
-}
-.nav {
-	@include spanbase;
-	width: columns-span(9.18);
-	background-color:pink;
-}
-ul {
-	padding:0;
-	margin:0;
-}
-ul li {
-	@include base;
-	width: columns(2.1);
-	background-color: green;
-	list-style:none;
-}
-.morenestedspan {
-	@include spanbase;
-	width: columns-span(6);
-	background-color:red;
-}
-.nestedspan {
-	@include spanbase;
-	width: columns-span(6);
-	background-color:#666;
-}
-.gridspan {
-	@include spanbase;
-	width: columns-span(4);
-	margin-left: offset(1);
-	background-color: #777;
-}
-.banner {
-	@include base;
-	width: columns(12);
-	background-color:#333;
-	height:150px;
-}
-.header {
-	@include base;
-	width: columns-span(12);
-	background-color: #000;
-	color: #fff;
-}
-.content {
-	@include base;
-	width: columns(8);
-	background-color: #666;
-	color: #fff;
-}
-.services {
-	@include base;
-	@include lastchild;
-	width: columns(4);
-	background-color: #e33;
-}
-.about {
-	@include base;
-	@include lastchild;
-	width: columns(3);
-	background-color: #444;
-}
-.contact {
-	@include spanbase;
-	width: columns-span(4);
-	background-color: #666;
-}
-.random {
-	@include base;
-	@include lastchild;
-	width: columns(5);
-	background-color: #888;
-}
-.product {
-	@include base;
-	@include lastchild;
-	width: columns(3);
-	background-color: #eee;
-	height: 150px;
-}
-.half {
-	@include base;
-	@include lastchild;
-	width: columns(6);
-	background-color: #777;
-}
-.a {
-	@include base;
-	@include lastchild;
-	width: columns(6);
-	background-color: #fff;
-}
-.nine {
-	@include base;
-	width: columns(3);
-	background-color: #999;
-}
-.anine {
-	@include base;
-	width: columns(2);
-	margin-left: offset(3);
-	background-color: #999;
-}
-.bnine {
-	@include base;
-	@include lastchild;
-	width: columns(2);
-	margin-right: offset(1);
-	background-color:#999;
-}
-.centrediv {
-	@include centre;
-	@include centretext;
-	width: columns(4);
-	background-color:#444;
-}
-.footer {
-	@include base;
-	width: columns(12);
-	background-color:#333;
-}
 
 @media only screen and (max-width: 320px) {
-	ul li, .nav, .gridspan, .product, .content, .services, .random, 
-	.about, .contact, .nine, .anine, .bnine, .half, .centrediv, .mastheadbanner {
+	.classeshere {
 	@include responsive;
 	}
 }
 
 @media only screen and (max-width: 768px) {
-	ul li, .nav, .gridspan, .product, .content, .services, .random,
-	.about, .contact, .nine, .anine, .bnine, .half, .centrediv, .mastheadbanner {
+	.classeshere {
 	@include responsive;
 	}
 }
