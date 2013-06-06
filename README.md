@@ -15,8 +15,8 @@ Prerequisites
 </ul>
 
 
-Why Autumn?
-===========
+Why Choose Autumn?
+==================
 
 <ul>
 <li>It's extremely customizable</li>
