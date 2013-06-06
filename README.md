@@ -56,11 +56,12 @@ Browser Support
 Autumn has amazing cross browser support.
 
 <ul>
-<li>IE 8+<li>
-<li>Firefox 3 +<li>
-<li>Chrome ALLli>
-<li>Safari 4+li>
-<li>*Opera 10+<li>
+<li>IE 8 +</li>
+<li>Firefox 3 +</li>
+<li>Chrome ALL</li>
+<li>Safari 4 +</li>
+<li>*Opera 10 +</li>
 </ul>
 
-
+*Autumn's grid is supported all the way down to Opera 10 but users may experience
+some minor subpixel rendering differences
