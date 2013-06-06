@@ -64,4 +64,4 @@ Autumn's grid has amazing cross browser support.
 </ul>
 
 *Autumn's grid is supported all the way down to Opera 10 but users may experience
-some minor subpixel rendering differences.
+some minor subpixel rendering differences in older versions of Opera.
