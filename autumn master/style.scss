@@ -1,0 +1,172 @@
+//  Reference Guide
+//  ---------------
+//  Please note: You should be writing your styles in this file but you should view
+//	the grid.scss file to change/customize the variables to suit your needs.
+//	
+//	@include row - should be added to your .row class.
+//	@include spanbase - should be added to elements you wish to make use of the border-box based grid system.
+//	@include base - should be added to elements you wish to use the grid system that uses margins as it's gutters.
+//	@include centre - include this on elements you want centred. Don't include spanbase & base on these elements.
+//	@include centretext - does exactly what it says on the tin, centre's text.
+//	@include responsive - should be included in the media query styles of your document, group all of your classes
+//	into your media query sections and simply add @include responsive.
+//	@include lastchild - !-!IMPORTANT!-! This mixin MUST be included on every last child in your grid. You must
+//	take care to ensure that it is included or the grid system(s) will fail. I deliberately left this 
+//	to the users discrecion to avoid repeated code.
+//
+//	To give your classes a width simply use: columns(number-of-columns); in your elements CSS width.
+//	If you are using the border-box grid system use: columns-span(number-of-columns); your elements CSS width.
+//
+//	To apply offsets to your columns simply apply offset(number-of-columns) to the left/right margin of the element.
+//
+@import 'autumn-grid/grid';
+
+
+body {
+	font-family: $basefont;
+	font-size: 	$basesize;
+	line-height: $lineheight;
+	margin: 0;
+}
+.row {
+	@include row;
+}
+.mastheadbanner {
+	@include centre;
+	width: columns(12);
+	background-color: #982;
+}
+.nav {
+	@include spanbase;
+	width: columns-span(9.18);
+	background-color:pink;
+}
+ul {
+	padding:0;
+	margin:0;
+}
+ul li {
+	@include base;
+	width: columns(2.1);
+	background-color: green;
+	list-style:none;
+}
+.morenestedspan {
+	@include spanbase;
+	width: columns-span(6);
+	background-color:red;
+}
+.nestedspan {
+	@include spanbase;
+	width: columns-span(6);
+	background-color:#666;
+}
+.gridspan {
+	@include spanbase;
+	width: columns-span(4);
+	margin-left: offset(1);
+	background-color: #777;
+}
+.banner {
+	@include base;
+	width: columns(12);
+	background-color:#333;
+	height:150px;
+}
+.header {
+	@include base;
+	width: columns-span(12);
+	background-color: #000;
+	color: #fff;
+}
+.content {
+	@include base;
+	width: columns(8);
+	background-color: #666;
+	color: #fff;
+}
+.services {
+	@include base;
+	@include lastchild;
+	width: columns(4);
+	background-color: #e33;
+}
+.about {
+	@include base;
+	@include lastchild;
+	width: columns(3);
+	background-color: #444;
+}
+.contact {
+	@include spanbase;
+	width: columns-span(4);
+	background-color: #666;
+}
+.random {
+	@include base;
+	@include lastchild;
+	width: columns(5);
+	background-color: #888;
+}
+.product {
+	@include base;
+	@include lastchild;
+	width: columns(3);
+	background-color: #eee;
+	height: 150px;
+}
+.half {
+	@include base;
+	@include lastchild;
+	width: columns(6);
+	background-color: #777;
+}
+.a {
+	@include base;
+	@include lastchild;
+	width: columns(6);
+	background-color: #fff;
+}
+.nine {
+	@include base;
+	width: columns(3);
+	background-color: #999;
+}
+.anine {
+	@include base;
+	width: columns(2);
+	margin-left: offset(3);
+	background-color: #999;
+}
+.bnine {
+	@include base;
+	@include lastchild;
+	width: columns(2);
+	margin-right: offset(1);
+	background-color:#999;
+}
+.centrediv {
+	@include centre;
+	@include centretext;
+	width: columns(4);
+	background-color:#444;
+}
+.footer {
+	@include base;
+	width: columns(12);
+	background-color:#333;
+}
+
+@media only screen and (max-width: 320px) {
+	ul li, .nav, .gridspan, .product, .content, .services, .random, 
+	.about, .contact, .nine, .anine, .bnine, .half, .centrediv, .mastheadbanner {
+	@include responsive;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	ul li, .nav, .gridspan, .product, .content, .services, .random,
+	.about, .contact, .nine, .anine, .bnine, .half, .centrediv, .mastheadbanner {
+	@include responsive;
+	}
+}

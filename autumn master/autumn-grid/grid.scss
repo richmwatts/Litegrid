@@ -1,0 +1,107 @@
+// 	Quick Start Guide
+//	-----------------
+//	This grid system contains two types of grid layouts. One that uses margins
+//	for it's gutters & one that uses padding & border-box to separate elements.
+//	The gird is based off a 12 column fluid grid & is extremely customizable.
+//	You can customize the grid to use 24, 16, 8... However many columns you would
+//	like. For 24 columns, change the values of $totalcols to 24 and $colwidth to 
+//	4.16666667% & you're set. $max-width sets the maximum width of the rows you 
+//	will use to contain your elements. $padding is obvious. $g is amount of gutter 
+//	that will appear between the grid that uses margins. I see no reason to mess 
+//	with $fullwidth really. For more information refer to the online documentation.
+//
+
+$basefont: Arial, Helvetica, sans-serif;
+$basesize: 100%;
+$lineheight: 1.5;
+
+$fullwidth: 100%;
+$colwidth: 8.33333333%;
+$totalcols: 12;
+$max-width: 1400px;
+$padding: 0.5em;
+$g: 2%;
+
+@mixin borderbox { 
+    -moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin clearfix() {
+	&:after {
+  	content:""; 
+	display: table;
+	clear: both;
+	}
+}
+@mixin row() {
+	@include clearfix;
+	margin: 0 auto;
+	max-width: $max-width;
+	width: 100%;
+}
+@mixin base() {
+	@include borderbox;
+	float: left;
+	margin-right: $g;
+	padding: $padding;
+	word-wrap: break-word;
+}
+@mixin spanbase() {
+	@include borderbox;
+	float: left;
+	margin-right: 0;
+	padding: $padding;
+	word-wrap: break-word;
+}
+@mixin centre() {
+	@include borderbox;
+	float: none;
+	padding: $padding;
+	margin: 0 auto;
+}
+@mixin centretext() {
+	text-align: center;
+}
+@mixin lastchild {
+	&:last-child { float: right; margin-right: 0; } 
+}
+@mixin responsive {
+	float:none;
+	width:100%;
+	margin: 0 !important;
+}
+
+// These functions are the grid systems engine room. They enable you to specify width: columns() in your CSS.
+// The use of arbitrary variable names here will not effect your ability to use these functions.
+// Refer to the documentation for detailed support & instructions on how to use this grid.
+
+@function columns($columns) {
+	@if $columns >= $totalcols {
+		@return ($fullwidth);
+	}
+	@else {
+		$var:   ($totalcols / $columns);
+		$var1:  $var - 1;
+		$var2:  $var1 * $g / $var;
+		$width: $columns * $colwidth - $var2;
+		@return	($width);
+	}
+}
+@function columns-span($columns-span) {
+	@if $columns-span >= $totalcols {
+		@return ($fullwidth);
+	}
+	@else {
+		$width: $columns-span * $colwidth;
+		@return ($width);
+	}
+}
+@function offset($offset) { 	
+		$var: 	($totalcols / $offset);
+		$var1: 	$var - 1 ;
+		$var2:	$var1 * $g / $var;
+		$var3:	$offset * $colwidth - $var2;
+		$width:	$var3 + $g;
+		@return ($width) !important;
+	}
