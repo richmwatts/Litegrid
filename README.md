@@ -47,3 +47,20 @@ choose your class names.
         </aside>
     </section>
  ```
+ 
+It's literally down to you to make your class names more semantic and meaningful.
+ 
+Browser Support
+===============
+
+Autumn has amazing cross browser support.
+
+<ul>
+<li>IE 8+<li>
+<li>Firefox 3 +<li>
+<li>Chrome ALLli>
+<li>Safari 4+li>
+<li>*Opera 10+<li>
+</ul>
+
+
