@@ -28,7 +28,7 @@ Why Autumn?
 <li>Built using the preprocessor SCSS</li>
 <li>Extensive documentation & support</li>
 <li>It's not BootStrap</li>
-
+</ul>
 
 The Syntax
 ==========
@@ -36,13 +36,14 @@ The syntax is effortless, there are no presentational classes (except the row cl
 which you can easily attach to a HTML5 ```<section>``` tag). Other than this you will
 choose your class names.
 
+ ```
     <section class="row">
-       <article class="blog">
-           Content here
-       </article>
+        <article class="blog">
+            Content here
+        </article>
        
-       <aside class="sidebar">
-           Content here
-       </aside>
+        <aside class="sidebar">
+            Content here
+        </aside>
     </section>
-
+ ```
