@@ -33,16 +33,16 @@ Why Autumn?
 The Syntax
 ==========
 
-The syntax is effortless, there are no presentational classes (expect the row class, 
-which you can easily attach to a <section>). You will choose your class names.
+The syntax is effortless, there are no presentational classes (except the row class, 
+which you can easily attach to a HTML5 ```<section>``` tag). You will choose your class names.
 
-```<section class="row">```
-``` <article class="blog">```
- ```   Content here```
-```</article>```
-
-```<aside class="sidebar">```
-```   Content here```
-```</aside>```
-```</section>```
+    <section class="row">
+       <article class="blog">
+           Content here
+       </article>
+       
+       <aside class="sidebar">
+           Content here
+       </aside>
+    </section>
 
