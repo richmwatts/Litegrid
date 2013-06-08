@@ -47,8 +47,20 @@ choose your class names.
         </aside>
     </section>
  ```
- 
+
 It's literally down to you to make your class names more semantic and meaningful.
+
+Getting Started
+===============
+
+I've released a screencast showcasing the Autumn grid in action here:
+http://www.youtube.com/watch?v=IkdhIdg1U60
+
+There is also quick reference guides for you to refer to inside the style.scss & grid.scss files.
+
+NOTE: In the above video I forgot to showcase the grid's offset capabilities so I plan on uploading
+another video in the coming days.
+ 
  
 Browser Support
 ===============
