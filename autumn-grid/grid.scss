@@ -50,7 +50,6 @@ $g: 2%;
 @mixin spanbase() {
 	@include borderbox;
 	float: left;
-	margin-right: 0;
 	padding: $padding;
 	word-wrap: break-word;
 }
