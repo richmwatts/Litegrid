@@ -9,7 +9,7 @@ Prerequisites
 =============
 
 <ul>
-<li>Ruby - Great guide for installing Ruby on MacOSX http://net.tutsplus.com/tutorials/ruby/how-to-install-ruby-on-a-mac/</li>
+<li>Ruby - Great guide for installing Ruby on Mac OSX http://net.tutsplus.com/tutorials/ruby/how-to-install-ruby-on-a-mac/ <br />- Guide for installing Ruby on Windows http://www.youtube.com/watch?v=WUdDdiu8kBs</li>
 <li>SASS http://sass-lang.com/</li>
 <li>The ability to copy simple commands into the terminal</li>
 </ul>
@@ -22,13 +22,15 @@ Why Choose Autumn?
 <li>It's extremely customizable</li>
 <li>It contains two grid systems</li>
 <li>Easily nest and offset your grid</li>
-<li>It's semantic</li>
+<li>It's semantic*</li>
 <li>Superb browser support </li>
 <li>It's lighting quick to use</li>
 <li>Built using the preprocessor SCSS</li>
 <li>Extensive documentation & support</li>
 <li>It's not BootStrap</li>
 </ul>
+
+ *It's semantic in the way that it removes presentational classes. It is 100% your responsibility to create semantic class names.
 
 The Syntax
 ==========
@@ -48,7 +50,7 @@ choose your class names.
     </section>
  ```
 
-It's literally down to you to make your class names more semantic and meaningful.
+As already stated it is literally down to you to make your class names more semantic and meaningful.
 
 Getting Started
 ===============
