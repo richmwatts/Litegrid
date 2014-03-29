@@ -19,12 +19,205 @@
 
 @import 'autumn-grid/grid';
 
+html {
+	font-size:100%;
+}
 body {
-	line-height:$lineheight;
-	font-family:$basefont;
-	font-size:$basesize;
+	font-family: $basefont;
+	font-size: 	$basesize;
+	line-height: $lineheight;
 	color:$basecolor;
-	margin:0;
+	margin: 0;
+}
+.caret {
+	border-top: 5px solid #fff;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	height: 0;
+}
+.invert {
+	border-top: 5px solid #000;
+}
+.dropdowncontain {
+	display:inline-block;
+}
+.dropdown-menu {
+	@include border-radius(4px);
+	display:none;
+	position: absolute;
+	z-index: 1000;
+	float: left;
+	min-width: 160px;
+	padding: .6em 0;
+	margin: .2em 0 0 0;
+	font-size: 90%;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+	   -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+	        box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+.dropdown-menu > li > a {
+	display: block;
+	text-align:left;
+	padding: .4em 1.2em;
+	clear: both;
+	font-weight: normal;
+	color: #333;
+	white-space: nowrap;
+	text-decoration:none;
+}
+.dropdown-menu > li > a:hover {
+	background-color:#eee;
+}
+.highlightdropdown {
+	background-color:#eee;
+}
+.dropdown-divider {
+	border-top: 1px solid #ccc;
+	margin: 0.5em 0;
+}
+.buttoncontainer {
+	@include centre;
+	@include centretext;
+}
+.button {
+	@include border-radius(3px);
+	border: 1px solid transparent;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: $btnsize;
+	margin: 0;
+	outline: 0;
+	padding: 0.6em 1em;
+}
+.largebtn{
+	@extend .button;
+	padding: .9em 1.5em;
+}
+.smallbtn {
+	@extend .button;
+	padding: .3em .5em;
+}
+.label {
+ 	@extend .smallbtn;
+ 	font-size:80%;
+ 	font-weight:bold;
+ 	cursor:default;
+ 	border-color:#ccc;
+}
+.defaultbutton,
+.defaultlabel {
+	background-color:#fff;
+	border-color:#ccc;
+	color:#333;
+}
+.defaultbutton:hover {
+	background-color:#ebebeb;
+	border-color:#adadad;
+}
+.defaultbutton:active {
+	@include btn-box-shadow;
+}
+.primarybutton,
+.primarylabel {
+	background-color:#428bca;
+	border-color:#357ebd;
+}
+.primarybutton:hover {
+	background-color:#3276b1;
+	border-color:#285e8e;
+}
+.primarybutton:active {
+	@include btn-box-shadow;
+}
+.warningbutton,
+.warninglabel {
+	background-color:#f1c40f;
+	border-color:#e0b60c;
+}
+.warningbutton:hover {
+	background-color: #e6bb0e;
+	border-color: #d4ac0b;
+}
+.warningbutton:active {
+	@include btn-box-shadow;
+}
+.errorbutton,
+.errorlabel {
+	background-color:#d9534f;
+	border-color:#d43f3a;
+}
+.errorbutton:hover {
+	background-color:#d2322d;
+	border-color:#ac2925;
+}
+.errorbutton:active {
+	@include btn-box-shadow;
+}
+.successbutton,
+.successlabel {
+	background-color:#5cb85c;
+	border-color:#4cae4c;
+}
+.successbutton:hover {
+	background-color:#47a447;
+	border-color:#398439;
+}
+.successbutton:active {
+	@include btn-box-shadow;
+}
+.accept {
+	min-width:90px;
+}
+.accepticon {
+	display:none;
+	color:green;
+}
+.erroricon {
+	display: none;
+	color:red;
+}
+.disabledbtn {
+	background-color:#eee;
+}
+
+// Layout specific styles
+.box {
+	@include base;
+	width:columns(3);
+	margin-bottom:1em;
+	background-color:#666;
+}
+.box:nth-child(4n) {
+	margin-right:0;
+	float:right;
+}
+.nav {
+	@include base;
+	width:columns(8);
+	background-color:#eee;
+}
+.content {
+	@include base;
+	width:columns(4);
+	background-color:#666;
+}
+.row {
+	@include row;
+	margin-top:1em;
+}
+.two {
+	@include base;
+	width:columns(2);
+	background-color:#666;
 }
 
 @media only screen and (max-width: 320px) {
