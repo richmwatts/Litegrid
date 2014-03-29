@@ -2,7 +2,7 @@
 //  ---------------
 //  Please note: You should be writing your styles in this file but you should view
 //	the grid.scss file to change/customize the variables to suit your needs.
-//	
+//
 //	@include row - should be added to your .row class.
 //	@include spanbase - should be added to elements you wish to make use of the border-box based grid system.
 //	@include base - should be added to elements you wish to use the grid system that uses margins as it's gutters.
@@ -10,33 +10,31 @@
 //	@include centretext - does exactly what it says on the tin, centre's text.
 //	@include responsive - should be included in the media query styles of your document, group all of your classes
 //	into your media query sections and simply add @include responsive.
-//	@include lastchild - !-!IMPORTANT!-! This mixin MUST be included on every last child in your grid. You must
-//	take care to ensure that it is included or the grid system(s) will fail. I deliberately left this 
-//	to the users discrecion to avoid repeated code.
 //
 //	To give your classes a width simply use: columns(number-of-columns); in your elements CSS width.
 //	If you are using the border-box grid system use: columns-span(number-of-columns); your elements CSS width.
 //
 //	To apply offsets to your columns simply apply offset(number-of-columns) to the left/right margin of the element.
-//
+
+
 @import 'autumn-grid/grid';
 
-
 body {
-	font-family: $basefont;
-	font-size: 	$basesize;
-	line-height: $lineheight;
-	margin: 0;
+	line-height:	$lineheight;
+	font-family:	$basefont;
+		font-size:	$basesize;
+				color:	$basecolor;
+			 margin:	0;
 }
 
 @media only screen and (max-width: 320px) {
-	.classeshere {
-	@include responsive;
+	.yourclasseshere {
+		@include responsive;
 	}
 }
 
 @media only screen and (max-width: 768px) {
-	.classeshere {
-	@include responsive;
+	.yourclasseshere {
+		@include responsive;
 	}
 }

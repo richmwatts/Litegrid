@@ -4,32 +4,50 @@
 //	for it's gutters & one that uses padding & border-box to separate elements.
 //	The gird is based off a 12 column fluid grid & is extremely customizable.
 //	You can customize the grid to use 24, 16, 8... However many columns you would
-//	like. For 24 columns, change the values of $totalcols to 24 and $colwidth to 
-//	4.16666667% & you're set. $max-width sets the maximum width of the rows you 
-//	will use to contain your elements. $padding is obvious. $g is amount of gutter 
-//	that will appear between the grid that uses margins. I see no reason to mess 
-//	with $fullwidth really. For more information refer to the online documentation.
-//
+//	like. For 24 columns, just change the value of totalcols and you're set.
+//  $max-width sets the maximum width of the rows you will use to contain your
+//  elements. $padding is obvious. $g is amount of gutter that will appear between
+//  the grid that uses margins. I see no reason to mess with $fullwidth really.
+//  For more information refer to the online documentation.
 
-$basefont: Arial, Helvetica, sans-serif;
+
+$basefont: "Helvetica Neue", Helvetica, sans-serif;
 $basesize: 100%;
+$basecolor: #333;
+$btnsize: 90%;
 $lineheight: 1.5;
 
-$fullwidth: 100%;
-$colwidth: 8.33333333%;
 $totalcols: 12;
-$max-width: 1400px;
+$fullwidth: 100%;
+$max-width: 1100px;
 $padding: 0.5em;
 $g: 2%;
 
-@mixin borderbox { 
-    -moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+$colwidth: 100% / $totalcols;
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+         -o-border-radius: $radius;
+            border-radius: $radius;
 }
+
+@mixin btn-box-shadow() {
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+	   -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+	        box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}
+
+@mixin borderbox() {
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
 @mixin clearfix() {
 	&:after {
-  	content:""; 
+  	content:"";
 	display: table;
 	clear: both;
 	}
@@ -39,6 +57,9 @@ $g: 2%;
 	margin: 0 auto;
 	max-width: $max-width;
 	width: 100%;
+		> div {
+			@include lastchild;
+		}
 }
 @mixin base() {
 	@include borderbox;
@@ -63,7 +84,10 @@ $g: 2%;
 	text-align: center;
 }
 @mixin lastchild {
-	&:last-child { float: right; margin-right: 0; } 
+			&:last-child {
+						float: right;
+						margin-right: 0;
+			}
 }
 @mixin responsive {
 	float:none;
@@ -80,7 +104,7 @@ $g: 2%;
 		@return ($fullwidth);
 	}
 	@else {
-		$var:   ($totalcols / $columns);
+		$var:   $totalcols / $columns;
 		$var1:  $var - 1;
 		$var2:  $var1 * $g / $var;
 		$width: $columns * $colwidth - $var2;
@@ -96,11 +120,11 @@ $g: 2%;
 		@return ($width);
 	}
 }
-@function offset($offset) { 	
-		$var: 	($totalcols / $offset);
-		$var1: 	$var - 1 ;
+@function offset($offset) {
+		$var: 	$totalcols / $offset;
+		$var1:  $var - 1 ;
 		$var2:	$var1 * $g / $var;
 		$var3:	$offset * $colwidth - $var2;
-		$width:	$var3 + $g;
-		@return ($width) !important;
-	}
+		$width: $var3 + $g;
+		@return ($width);
+}
