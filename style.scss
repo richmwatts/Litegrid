@@ -29,6 +29,8 @@ body {
 	color:$basecolor;
 	margin: 0;
 }
+
+// The below style section is for framework styles
 .caret {
 	border-top: 5px solid #fff;
 	border-right: 5px solid transparent;
@@ -220,6 +222,7 @@ body {
 	background-color:#666;
 }
 
+// Responsive styles
 @media only screen and (max-width: 320px) {
 	.yourclasseshere {
 		@include responsive;
