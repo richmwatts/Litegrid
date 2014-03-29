@@ -41,15 +41,15 @@ $colwidth: 100% / $totalcols;
 
 @mixin borderbox() {
 	-webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
+       -moz-box-sizing: border-box; 
 	        box-sizing: border-box;
 }
 
 @mixin clearfix() {
 	&:after {
-  	content: "";
-		display: table;
-		clear: both;
+  	content:""; 
+	display: table;
+	clear: both;
 	}
 }
 @mixin row() {
@@ -84,10 +84,9 @@ $colwidth: 100% / $totalcols;
 	text-align: center;
 }
 @mixin lastchild {
-			&:last-child {
-						float: right;
-						margin-right: 0;
-			}
+		&:last-child { 	float: right; 
+						margin-right: 0; 
+					} 
 }
 @mixin responsive {
 	float:none;
@@ -120,11 +119,11 @@ $colwidth: 100% / $totalcols;
 		@return ($width);
 	}
 }
-@function offset($offset) {
+@function offset($offset) { 	
 		$var: 	$totalcols / $offset;
-		$var1:  $var - 1 ;
+		$var1: 	$var - 1 ;
 		$var2:	$var1 * $g / $var;
 		$var3:	$offset * $colwidth - $var2;
-		$width: $var3 + $g;
+		$width:	$var3 + $g;
 		@return ($width);
 }

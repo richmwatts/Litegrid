@@ -20,11 +20,11 @@
 @import 'autumn-grid/grid';
 
 body {
-	line-height:	$lineheight;
-	font-family:	$basefont;
-		font-size:	$basesize;
-				color:	$basecolor;
-			 margin:	0;
+	line-height:$lineheight;
+	font-family:$basefont;
+	font-size:$basesize;
+	color:$basecolor;
+	margin:0;
 }
 
 @media only screen and (max-width: 320px) {
