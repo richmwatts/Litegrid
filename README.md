@@ -1,7 +1,7 @@
 Autumn
 ======
 
-Autumn in it's currennt form is an <b>extremely</b> flexible grid system. However, it is hoped Autumn will eventually
+Autumn in it's current form is an <b>extremely</b> flexible grid system. However, it is hoped Autumn will eventually
 evolve into an extensive framework that will enable you to take your projects from the sketching stages right through
 to shipping the final product.
 
@@ -10,7 +10,7 @@ Prerequisites
 
 <ul>
 <li>Ruby - Great guide for installing Ruby on Mac OSX http://net.tutsplus.com/tutorials/ruby/how-to-install-ruby-on-a-mac/ <br />- Guide for installing Ruby on Windows http://www.youtube.com/watch?v=WUdDdiu8kBs</li>
-<li>SASS http://sass-lang.com/</li>
+<li>SASS - http://sass-lang.com/</li>
 <li>The ability to copy simple commands into the terminal</li>
 </ul>
 
@@ -34,7 +34,7 @@ Why Choose Autumn?
 
 The Syntax
 ==========
-The syntax is effortless, there are no presentational classes (except the row class, 
+The syntax is effortless, there are no presentational classes (except the row class,
 which you can easily attach to a HTML5 ```<section>``` tag). Other than this you will
 choose your class names.
 
@@ -43,7 +43,7 @@ choose your class names.
         <article class="blog">
             Content here
         </article>
-       
+
         <aside class="sidebar">
             Content here
         </aside>
@@ -62,15 +62,15 @@ There is also quick reference guides for you to refer to inside the style.scss &
 
 NOTE: In the above video I forgot to showcase the grid's offset capabilities so I plan on uploading
 another video in the coming weeks.
- 
- 
+
+
 Browser Support
 ===============
 
 Autumn's grid has amazing cross browser support.
 
 <ul>
-<li>IE 8 +</li>
+<li><del>IE 8 +</del> IE 9 +</li>
 <li>Firefox 3 +</li>
 <li>Chrome ALL</li>
 <li>Safari 4 +</li>
