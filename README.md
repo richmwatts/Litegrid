@@ -55,7 +55,11 @@ As already stated it is literally down to you to make your class names more sema
 Getting Started
 ===============
 
-I've released a screencast showcasing the Autumn grid in action here:
+Download/clone this repository and compile the SCSS into raw CSS via the method relevant to your platform. Eg. The Terminal if you're running OS X.
+
+You can then open index.html in your chosen browser and see the proof of concept grid system.
+
+I've released a screencast showcasing how to get started with the Autumn grid system here:
 http://www.youtube.com/watch?v=IkdhIdg1U60
 
 There is also quick reference guides for you to refer to inside the style.scss & grid.scss files.
