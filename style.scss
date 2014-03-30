@@ -52,8 +52,8 @@ body {
 	z-index: 1000;
 	float: left;
 	min-width: 160px;
-	padding: .6em 0;
-	margin: .2em 0 0 0;
+	padding: 0.6em 0;
+	margin: 0.2em 0 0 0;
 	font-size: 90%;
 	list-style: none;
 	background-color: #fff;
@@ -101,11 +101,11 @@ body {
 }
 .largebtn{
 	@extend .button;
-	padding: .9em 1.5em;
+	padding: 0.9em 1.5em;
 }
 .smallbtn {
 	@extend .button;
-	padding: .3em .5em;
+	padding: 0.3em 0.5em;
 }
 .label {
  	@extend .smallbtn;
