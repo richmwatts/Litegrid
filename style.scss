@@ -20,11 +20,10 @@
 @import 'autumn-grid/grid';
 
 html {
-	font-size:100%;
+	font-size:$basesize;
 }
 body {
 	font-family: $basefont;
-	font-size: 	$basesize;
 	line-height: $lineheight;
 	color:$basecolor;
 	margin: 0;
