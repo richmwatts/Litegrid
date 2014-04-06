@@ -59,6 +59,7 @@ $colwidth: 100% / $totalcols;
 	width: 100%;
 		> div {
 			@include lastchild;
+			@include onlychild;
 		}
 }
 @mixin base() {
@@ -84,9 +85,16 @@ $colwidth: 100% / $totalcols;
 	text-align: center;
 }
 @mixin lastchild {
-		&:last-child { 	float: right; 
-						margin-right: 0; 
-					} 
+		&:last-child { 	
+				float: right; 
+				margin-right: 0; 
+		} 
+}
+@mixin onlychild {
+		&:only-child {
+				float:left !important;
+				margin-right:0;
+		}
 }
 @mixin responsive {
 	float:none;
