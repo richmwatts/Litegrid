@@ -7,23 +7,23 @@
 //	like. For 24 columns, just change the value of totalcols and you're set.
 //  $max-width sets the maximum width of the rows you will use to contain your
 //  elements. $padding is obvious. $g is amount of gutter that will appear between
-//  the grid that uses margins. I see no reason to mess with $fullwidth really.
-//  For more information refer to the online documentation.
+//  the grid that uses margins.
 
 
 $basefont: "Helvetica Neue", Helvetica, sans-serif;
-$basesize: 100%;
+$basesize: 90%;
 $basecolor: #333;
 $btnsize: 90%;
 $lineheight: 1.5;
 
 $totalcols: 12;
 $fullwidth: 100%;
-$max-width: 1100px;
+$max-width: 1200px;
 $padding: 0.5em;
 $g: 2%;
 
-$colwidth: 100% / $totalcols;
+$colwidth_span: 100% / $totalcols;
+$colwidth_g: (100% - ($g * ($totalcols - 1))) / $totalcols;
 
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
@@ -41,15 +41,15 @@ $colwidth: 100% / $totalcols;
 
 @mixin borderbox() {
 	-webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
+       -moz-box-sizing: border-box; 
 	        box-sizing: border-box;
 }
 
 @mixin clearfix() {
 	&:after {
-  	content: "";
-		display: table;
-		clear: both;
+  	content:""; 
+	display: table;
+	clear: both;
 	}
 }
 @mixin row() {
@@ -59,6 +59,7 @@ $colwidth: 100% / $totalcols;
 	width: 100%;
 		> div {
 			@include lastchild;
+			@include onlychild;
 		}
 }
 @mixin base() {
@@ -74,6 +75,20 @@ $colwidth: 100% / $totalcols;
 	padding: $padding;
 	word-wrap: break-word;
 }
+@mixin centrewidth($totalwidth:"") {
+	@include borderbox;
+	@if ($totalwidth != null) {
+		$totalwidth: $totalwidth;
+	}
+	@else {
+		$totalwidth: 100%;
+	}
+	max-width: $max-width;
+	width: $totalwidth;
+	background-color:#ccc;
+	margin:0 auto;
+	float:none;
+}
 @mixin centre() {
 	@include borderbox;
 	float: none;
@@ -84,10 +99,14 @@ $colwidth: 100% / $totalcols;
 	text-align: center;
 }
 @mixin lastchild {
-			&:last-child {
-						float: right;
-						margin-right: 0;
-			}
+		&:last-child { 	float: right; 
+						margin-right: 0; 
+					} 
+}
+@mixin onlychild {
+		&:only-child {
+			float:left !important;
+		}
 }
 @mixin responsive {
 	float:none;
@@ -95,20 +114,23 @@ $colwidth: 100% / $totalcols;
 	margin: 0 !important;
 }
 
-// These functions are the grid systems engine room. They enable you to specify width: columns() in your CSS.
-// The use of arbitrary variable names here will not effect your ability to use these functions.
-// Refer to the documentation for detailed support & instructions on how to use this grid.
+// This is where the magic happens.
+// Refer to the documentation for detailed support & instructions.
+
+@mixin sub_cols($num_child, $num_parent) {
+	$parent_size: ($colwidth_g * $num_parent) + ($g * ($num_parent - 1));
+	$child_size: ($colwidth_g * $num_child) + ($g * ($num_child - 1));
+	margin-right: ($g / $parent_size) * 100%;
+	width: ($child_size / $parent_size) * 100%;
+}
 
 @function columns($columns) {
 	@if $columns >= $totalcols {
 		@return ($fullwidth);
 	}
 	@else {
-		$var:   $totalcols / $columns;
-		$var1:  $var - 1;
-		$var2:  $var1 * $g / $var;
-		$width: $columns * $colwidth - $var2;
-		@return	($width);
+		$totalwidth: ($colwidth_g * $columns) + ($g * ($columns - 1));
+		@return	($totalwidth);
 	}
 }
 @function columns-span($columns-span) {
@@ -116,15 +138,15 @@ $colwidth: 100% / $totalcols;
 		@return ($fullwidth);
 	}
 	@else {
-		$width: $columns-span * $colwidth;
+		$width: $columns-span * $colwidth_span;
 		@return ($width);
 	}
 }
-@function offset($offset) {
+@function offset($offset) { 	
 		$var: 	$totalcols / $offset;
-		$var1:  $var - 1 ;
+		$var1: 	$var - 1 ;
 		$var2:	$var1 * $g / $var;
-		$var3:	$offset * $colwidth - $var2;
-		$width: $var3 + $g;
+		$var3:	$offset * $colwidth_g - $var2;
+		$width:	$var3 + $g;
 		@return ($width);
 }
