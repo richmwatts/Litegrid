@@ -40,7 +40,7 @@ body {
 	height: 0;
 }
 .invert {
-	border-top: 5px solid #000;
+	border-top: 5px solid #333;
 }
 .dropdowncontain {
 	display:inline-block;
@@ -188,37 +188,6 @@ body {
 }
 .disabledbtn {
 	background-color:#eee;
-}
-
-// Layout specific styles
-.box {
-	@include base;
-	width:columns(3);
-	margin-bottom:1em;
-	background-color:#666;
-}
-.box:nth-child(4n) {
-	margin-right:0;
-	float:right;
-}
-.nav {
-	@include base;
-	width:columns(8);
-	background-color:#eee;
-}
-.content {
-	@include base;
-	width:columns(4);
-	background-color:#666;
-}
-.row {
-	@include row;
-	margin-top:1em;
-}
-.two {
-	@include base;
-	width:columns(2);
-	background-color:#666;
 }
 
 // Responsive styles

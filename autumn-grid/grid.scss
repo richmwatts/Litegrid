@@ -123,7 +123,6 @@ $colwidth_g: (100% - ($g * ($totalcols - 1))) / $totalcols;
 	margin-right: ($g / $parent_size) * 100%;
 	width: ($child_size / $parent_size) * 100%;
 }
-
 @function columns($columns) {
 	@if $columns >= $totalcols {
 		@return ($fullwidth);
