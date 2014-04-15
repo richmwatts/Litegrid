@@ -25,7 +25,7 @@ html {
 body {
 	font-family: $basefont;
 	line-height: $lineheight;
-	color:$basecolor;
+	color:$basedarkcolor;
 	margin: 0;
 }
 
@@ -40,7 +40,7 @@ body {
 	height: 0;
 }
 .invert {
-	border-top: 5px solid #333;
+	border-top: 5px solid $basedarkcolor;
 }
 .dropdowncontain {
 	display:inline-block;
@@ -70,7 +70,7 @@ body {
 	padding: .4em 1.2em;
 	clear: both;
 	font-weight: normal;
-	color: #333;
+	color: $basedarkcolor;
 	white-space: nowrap;
 	text-decoration:none;
 }
@@ -97,7 +97,7 @@ body {
 	font-size: $btnsize;
 	margin: 0;
 	outline: 0;
-	padding: 0.6em 1em;
+	padding: 0.5em 1em;
 }
 .largebtn{
 	@extend .button;
@@ -118,7 +118,7 @@ body {
 .defaultlabel {
 	background-color:#fff;
 	border-color:#ccc;
-	color:#333;
+	color:$basedarkcolor;
 }
 .defaultbutton:hover {
 	background-color:#ebebeb;
@@ -189,6 +189,49 @@ body {
 .disabledbtn {
 	background-color:#eee;
 }
+
+// Highlights - Can be used for things like table row highlights
+.activehighlight, .successhighlight {
+	background-color:#dff0d8;
+}
+.warninghighlight {
+	background-color:#fcf8e3;
+}
+.errorhighlight {
+	background-color:#f2dede;
+}
+.infohighlight {
+	background-color:#d9edf7;
+}
+
+
+.inputgroup {
+	display:inline-block;
+	padding:0 0.5em 0 0;
+}
+.genericinput {
+	margin: 0;
+	font-size: 80%;
+	border: 1px solid #ccc;
+	padding: 0.5em 0.8em;
+	border-radius: 3px;
+}
+.formlabel {
+	display:block;
+	margin: 1em 0 0.2em 0;
+	font-weight: bold;
+	font-size: 90%;
+}
+.checkbox {
+	display:inline-block;
+	padding: 0 1em 0 0;
+}
+.hr {
+  border: solid #ccc;
+  border-width: 1px 0 0;
+
+}
+
 
 // Responsive styles
 @media only screen and (max-width: 320px) {
