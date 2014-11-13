@@ -49,7 +49,7 @@ choose your class names.
     </section>
  ```
 
-As already stated it is literally down to you to make your class names more semantic and meaningful.
+It is literally down to you to make your class names more semantic and meaningful.
 
 Getting Started
 ===============
@@ -63,7 +63,6 @@ http://www.youtube.com/watch?v=IkdhIdg1U60
 
 There is also quick reference guides for you to refer to inside the style.scss & grid.scss files.
 
-
 Browser Support
 ===============
 Litegrid's grid has amazing cross browser support.
@@ -76,6 +75,6 @@ Litegrid's grid has amazing cross browser support.
 <li>*Opera 10 +</li>
 </ul>
 
-Litegrid's grid system is supported all the way down to Opera 10 but users may experience
+Litegrid's is supported all the way down to Opera 10 but users may experience
 some minor subpixel rendering differences in older versions of Opera.
 Litegrid is a project created & maintained by <a href="http://twitter.com/richmwatts">@richmwatts</a>
