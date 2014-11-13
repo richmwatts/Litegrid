@@ -1,7 +1,6 @@
-Autumn
+Litegrid
 ======
-
-Autumn in it's current form is an <b>extremely</b> flexible grid system. However, it is hoped Autumn will eventually
+Litegrid in it's current form is an <b>extremely</b> flexible grid system. However, it is hoped Litegrid will eventually
 evolve into an extensive framework that will enable you to take your projects from the sketching stages right through
 to shipping the final product.
 
@@ -15,7 +14,7 @@ Prerequisites
 </ul>
 
 
-Why Choose Autumn?
+Why Choose Litegrid?
 ==================
 
 <ul>
@@ -59,7 +58,7 @@ Download/clone this repository and compile the SCSS into raw CSS via the method 
 
 You can then open index.html in your chosen browser and see the proof of concept grid system.
 
-I've released a screencast showcasing how to get started with the Autumn grid system here:
+I've released a screencast showcasing how to get started with the Litegrid grid system here:
 http://www.youtube.com/watch?v=IkdhIdg1U60
 
 There is also quick reference guides for you to refer to inside the style.scss & grid.scss files.
@@ -70,8 +69,7 @@ another video in the coming weeks.
 
 Browser Support
 ===============
-
-Autumn's grid has amazing cross browser support.
+Litegrid's grid has amazing cross browser support.
 
 <ul>
 <li><del>IE 8 +</del> IE 9 +</li>
@@ -81,7 +79,6 @@ Autumn's grid has amazing cross browser support.
 <li>*Opera 10 +</li>
 </ul>
 
-*Autumn's grid system is supported all the way down to Opera 10 but users may experience
+Litegrid's grid system is supported all the way down to Opera 10 but users may experience
 some minor subpixel rendering differences in older versions of Opera.
-
-Autumn is a project created & maintained by <a href="http://twitter.com/richmwatts">@richmwatts</a>
+Litegrid is a project created & maintained by <a href="http://twitter.com/richmwatts">@richmwatts</a>
